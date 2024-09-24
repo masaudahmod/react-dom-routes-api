@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -6,7 +6,7 @@ const Navbar = () => {
     const menuList = [
         {
             title: 'home',
-            to: '/home'
+            to: '/'
         },
         {
             title: 'services',
@@ -17,6 +17,10 @@ const Navbar = () => {
             to: '/all-countries'
         },
         {
+            title: 'context api',
+            to: '/context-api'
+        },
+        {
             title: 'about',
             to: '/about'
         }
@@ -25,7 +29,9 @@ const Navbar = () => {
     return (
         <nav className="bg-zinc-500 py-4">
             <div className="container mx-auto flex justify-between items-center">
-                <div className="text-4xl font-bold tracking-wide">My Logo</div>
+                <div className="text-4xl font-bold tracking-wide">
+                    <Link to={'/'}>My Logo</Link>
+                </div>
                 <div>
                     <ul className="flex gap-5">
                         {
